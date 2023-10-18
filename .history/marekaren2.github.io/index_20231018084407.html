@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="/favicon.png" type="image/png">
+
+  <title>Formularz for Github Pages </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <form action="https://formspree.io/f/xnqkljvd" method="POST">
+
+    <label for="name"> Podaj imię </label>
+    <input type="text" name="name" id="name" placeholder="Name" required>
+
+    <label for="lastname"> Podaj nazwisko </label>
+    <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
+
+    <label for="email"> Podaj email </label>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+
+    <label for="phone"> Podaj telefon </label>
+    <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+
+    <label for="miasto"> Podaj miasto </label>
+
+    <select name="miasto" id="miasto">
+      <option value="Kraków"> Kraków </option>
+      <option value="Warszawa"> Warszawa </option>
+      <option value="Gdańsk"> Gdańsk </option>
+      <option value="Poznań"> Poznań </option>
+
+    </select> <br>
+
+    <input type="checkbox" name="rodo" id="rodo">
+    <label for="rodo"> Zgoda na dane osobowe </label> 
+
+    <!-- ta sama nazwa name dla grupy radio -->
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Mężczyzna</label> 
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Kobieta</label>
+
+    <label for="message"> Podaj wiadomość </label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+
+
+
+    <input type="submit" value="Wyślij">
+
+
+
+
+
+  </form>
+  <!-- Stwórz formularz, który pozwoli na zapis uczestnika na szkolenie - pola:
+
+    imię
+
+    nazwisko 
+
+    mail
+
+    telefon
+
+    wybór miasta (Kraków, Warszawa, Gdańsk) - select
+
+    płeć - radio
+
+    zgoda na dane osobowe - checkbox
+
+    wiadomość - textarea
+
+Zadanie wyślij za pomocą GitHub Pages.
+
+Podpowiedź przed wysłaniem zadania do sprawdzenia:
+
+    sprawdź dopasowanie labelek do pól formularza
+
+    sprawdź, czy formularz wysyła maile na Twój adres z wykorzystaniem serwisu 
+    sprawdź poprawność składni w walidatorze W3C  -->
+
+
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="pink" position="bottom-right"></script>
+</body>
+
+</html>
