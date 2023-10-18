@@ -4,12 +4,12 @@ html {
 }
 
 form {
-  /* background-color: #213b50; */
-  background-color: greenyellow;
+  background-color: #213b50;
+  /* background-color: greenyellow; */
   color: #fff;
   width: 50%;
   padding: 20px;
-  
+
   height: auto;
   /* teraz test */
 }
