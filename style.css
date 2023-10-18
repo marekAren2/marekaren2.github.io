@@ -33,6 +33,7 @@ textarea:focus {
   border: 1px solid #fff;
   background-color: #4e708c;
   display: block;
+  
 }
 
 input[type="radio"],
