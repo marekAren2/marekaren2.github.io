@@ -1,0 +1,21 @@
+/* body {
+    width: auto;
+} */
+// ASK : czym sie rozni import od include
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/normalize';
+@import 'base/global';
+
+// ASK: dlaczego grid na poczatku
+@import 'layout/grid';
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/services';
+@import 'layout/infoboxes';
+
+
+@import 'components/buttons';
+

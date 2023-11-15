@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt SPA HCJS</title>
+    <!-- // ASK 0: co z google font sie wladowalo co to jest preconnect?     -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- // ASK :0.5 czemu w font google jest najpierw href= a pozniej rel= -->
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- // ASK 1: twoj link posiada jakiegos hasha key sha integrity? o co chodzi? pobrane spod video -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- //ASK 2: jak bezpiecznie i zgodnie dolaczac zewnetrzne zaoby chyba wyszukalem po cdn font awesome ;
+         rozne wersje czy bedzie zgodnosc np wsteczna w zewnetrznych zasobach jak je wybierac i z nimi postepowc-->
+         <!-- ASK 3: jak sprawdzac te zewnetrzne includy zalaczenia czy sa poprawne jest sposob pre wczytania? -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ASK : jak sprawdzac zamkniecia pary klamry ;niezawodny sposob procedura -->
+    <!-- <h2>Projekt SPA HCJS</h2> -->
+    <nav class="main-nav">
+        <div class="container">
+                <div class="main-nav-holder">
+                    <a href="" class="brand"><img src="/img/logo-txt.png" alt="logo z tekstem"></a>
+                    <div class="mobile-hamburger">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <!-- ASK: jak zobaczyc barsy po %extend -->
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- ASK: nie do konca rozumiem po co op-men-holder -->
+                    <!-- ODP: mobile-hamburger jest na pierwszym planie, open-menu-holder jest na drugim z children:[(m-close>i), (menu>menu-item)]  -->
+                    <div class="open-menu-holder">
+                        <div class="mobile-close">
+                            <!-- <i class="fas fa-times"></i> -->
+                            <!-- ASK : fa-bars nie widac mimo off fa-xtime -->
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item"><a href="">Home</a></li>
+                            <li class="menu-item"><a href="">About</a></li>
+                            <li class="menu-item"><a href="">Feature</a></li>
+                            <li class="menu-item"><a href="">Service</a></li>
+                            <li class="menu-item"><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+       </div>
+    </nav>
+    <header class="main-header">
+        <div class="container">
+            <div class="main-header-holder">
+                <!-- ASK: dlaczego jest nie widoczne powyzej mobile 992?! a po zmniejszeniu przykrywa go nav.nie powinien ustawic sie pod? -->
+                <p class="header-description">Spa and Executive Reflexology</p>
+                <h1> Beauty and success starts here.</h1>
+                <p class="main-header-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Fuga eum inventore maxime cupiditate impedit corporis, dolorum ex in est, illo quia.
+                     Cumque suscipit aperiam autem expedita vel quae dolorem quisquam doloremque odio eius ut,
+                      perferendis dicta minus illo impedit aspernatur maiores nostrum  hic. </p>
+                <div class="buttons-panel">
+                    <!-- ASK: co za kod strzaleczki gdzie cos wiecej -->
+                    <!-- ASK: reserve byla literowka 53;46 pomogl peek css-->
+                    <a href="" class="reserve">Reserve now &#8594;</a>
+                    <!-- ASK: specjalnie zrobiona spacja w t: Watch out ...? -->
+                    <a href="" class="watch"><i class="fas fa-play"></i> Watch out story</a>
+                </div>
+            </div>
+        </div>
+        <img src="./img/header-flowers.png" alt="Flowers" class="header-flowers">
+        <img src="./img/header-bg.png" alt="Header Background" class="header-bg">
+    </header>
+    <section class="about" id="about">
+        <div class="container">
+            <header class="about-header">
+            <!-- <div class="about-header"> -->
+                <img src="/img/logo.png" alt="logo">
+                <p class="about-header-description">About our spa center</p>
+                <h2>Come and you will be Inspired!</h2>
+            <!-- </div> -->
+            </header>
+            <p class="about-content">It’s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the sky gets darker and darker</p>
+            <a href="" class="btn-primary">Read more</a>
+        </div>
+
+    </section>
+    <section id="services" class="services">
+        <div class="row">
+            <!-- ODP: servisy zrobione jako a href zeby klikac na calosc nie ma przyciskow -->
+            <a href="" class="service col col-md-50p col-lg-25p">
+            <!-- ODP: literowka w klacie md 50p -->
+            <!-- <a href="" class="service col cl-md-50p col-lg-25p"> -->
+                <img src="/img/services-bg-1.jpg" alt="Service Background">
+                <!-- ASK: tu byl blad, ale chyba nic nie wnosi -->
+                <!-- <div class="div service-overlay"> -->
+                <div class="service-overlay">
+                    <img src="/img/icons/icon-spa.png" alt="Icon SPA">
+                    <h3>Body Treatment</h3>
+                </div>
+            </a>
+            <a href="" class="service col col-md-50p col-lg-25p">
+                <img src="/img/services-bg-2.jpg" alt="Service Background 2">
+                <div class="div service-overlay">
+                    <img src="/img/icons/icon-spa.png" alt="Icon SPA">
+                    <h3>Body Treatment</h3>
+                </div>
+            </a>
+            <a href="" class="service col col-md-50p col-lg-25p">
+                <img src="/img/services-bg-3.jpg" alt="Service Background 3">
+                <div class="div service-overlay">
+                    <img src="/img/icons/icon-spa.png" alt="Icon SPA">
+                    <h3>Body Treatment</h3>
+                </div>
+            </a>
+            <a href="" class="service col col-md-50p col-lg-25p">
+                <img src="/img/services-bg-4.jpg" alt="Service Background 4">
+                <div class="div service-overlay">
+                    <img src="/img/icons/icon-spa.png" alt="Icon SPA">
+                    <h3>Body Treatment</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="procedures" class="procedures">
+        <div class="container">
+            <header class="section-header">
+                <!-- <div class="section-header"> -->
+                <h2>Popular procedures</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero suscipit ex dolore laborum,
+                    dolores temporibus aliquam, architecto in sed, voluptates harum repudiandae! Ad commodi ea dolores
+                     ipsa ut minima.</p>
+            </header>
+            <div class="row">
+                <!-- ODP: tu mamy przyciski dlatego div nie a href -->
+                <div class="infobox col col-md-33p">
+                <!-- <a href="" class="infobox col col-md-33"> -->
+                    <div class="infobox-inner">
+                        <img src="/img/procedures-bg-1.jpg" alt="background 1">
+                        <h3>Massage Therapy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus magnam quisquam laboriosam. Vitae, voluptatum illum. Saepe eum sint, soluta quaerat voluptas, commodi unde esse iste ratione dolorem iusto officia.</p>
+                        <!-- ASK: dlaczego secondary a nnie btn-primary zrobilem w _buttons -->
+                        <a href="" class="btn-secondary">Read more</a>
+                    </div>
+                </div>
+                <div class="infobox col col-md-33p">
+                    <!-- <a href="" class="infobox col col-md-33"> -->
+                        <div class="infobox-inner">
+                            <img src="/img/procedures-bg-2.jpg" alt="background 2">
+                            <h3>Beauty Care</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus magnam quisquam laboriosam. Vitae, voluptatum illum. Saepe eum sint, soluta quaerat voluptas, commodi unde esse iste ratione dolorem iusto officia.</p>
+                            <!-- ASK: dlaczego secondary a nnie btn-primary zrobilem w _buttons -->
+                            <a href="" class="btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                    <div class="infobox col col-md-33p">
+                        <!-- <a href="" class="infobox col col-md-33"> -->
+                            <div class="infobox-inner">
+                                <img src="/img/procedures-bg-3.jpg" alt="background 3">
+                                <h3>Executive Reflexology</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus magnam quisquam laboriosam. Vitae, voluptatum illum. Saepe eum sint, soluta quaerat voluptas, commodi unde esse iste ratione dolorem iusto officia.</p>
+                                <!-- ASK: dlaczego secondary a nnie btn-primary zrobilem w _buttons -->
+                                <a href="" class="btn-secondary">Read more</a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="team">
+        <div class="container">
+            <header class="section-header">
+                <!-- <div class="section-header"> -->
+                <h2>Experienced team</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero suscipit ex dolore laborum,
+                    dolores temporibus aliquam, architecto in sed, voluptates harum repudiandae! Ad commodi ea dolores
+                     ipsa ut minima.</p>
+            </header>
+            <div class="row">
+                <div class="infobox-team col col-md-33p">
+                    <div class="infobox-caption">
+                        <img src="/img/team-1.jpg" alt="team 1">
+                        <h3>Jenny Austin</h3>
+                        <p>Thai massage</p>
+                        <div class="team-social-icons">
+                            <!-- ASK: te nie dzialaja robimy nowe  fa na fa-brands -->
+                            <!-- <a href=""><i class="fa fa-facebook"></i></a> -->
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <!-- <a href="" class="btn-secondary">Read more</a> -->
+                    </div>
+                </div>
+                <div class="infobox-team col col-md-33p">
+                    <div class="infobox-caption">
+                        <img src="/img/team-3.jpg" alt="team 3">
+                        <h3>David Hannan</h3>
+                        <p>Thai massage</p>
+                        <div class="team-social-icons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="infobox-team col col-md-33p">
+                    <div class="infobox-caption">
+                        <img src="/img/team-2.jpg" alt="team 2">
+                        <h3>Cheryl Charris</h3>
+                        <p>Thai massage</p>
+                        <div class="team-social-icons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

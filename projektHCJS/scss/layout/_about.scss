@@ -1,0 +1,27 @@
+.about {
+    text-align: center;
+    
+    .about-header {
+    
+        img {
+            max-width: 100px;
+        }
+
+        .about-header-description {
+            color: $secondary-color;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            // ASK: po co i dlaczego? margin 0
+            margin-bottom: 0px;
+        }
+    }
+
+    .about-content {
+        max-width: 850px;
+        font-weight: 300;
+        // ASK: po co zerujemy?
+        margin: 0 auto;
+        margin: 26px;
+
+    }
+}

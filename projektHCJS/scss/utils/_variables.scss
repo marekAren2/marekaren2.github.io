@@ -1,0 +1,41 @@
+// fonts
+//ASK: cursive nie swieci na pomaranczowo co oznacza kolor albo brak
+// $font-primary: 'Roboto', sans-serif;
+// $font-secondary: 'Bellota', cursive;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Bellota', cursive;
+
+//colors kolor elementow a drugi fontow
+// $color-primary: #1ba4ce ;
+$primary-color: #1ba4ce ;
+// ASK: moja pomylka wyrazowka ma byc $secondary-color
+$secondary-color: #473452;
+// $secondary-color: red;
+// $color-secondary: #473452;
+
+$button-color: #30383b;
+//ASK:  co to za zapisy fontow rozne
+$primary-text-color: #888888;
+$secondary-text-color: #555;
+
+// color fonts
+// ASK: byl trzeci kolor i czwrty na przycisku rozumiem ze bierzemy najczestsze
+// $color-font-primary: #473452;
+// na dole strony footer
+// $color-font-secondary: #835285 ;
+
+// $color-text-secondary: 473452;
+//ASK 1:  naglowek strony ma czarny kolor czemu go nie biezemy?
+//ASK 2: skad te wartosci?
+
+// containers
+$small-container: 100%;
+$large-container: 960px;
+$extra-large-container: 1140px;
+// ASK3 : a te wartosci skad? apropo bootstrap te z tabeli jak ja czytac? roznice miedzy nimi .tabelka z bootstrap
+// mobile breakpoints co to?
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;

@@ -1,0 +1,67 @@
+.services {
+
+    .service {
+        // ODP: od niej bedziemy kolejny pozycjonowac przezroczysty
+        position: relative;
+        // ASK: dlaczego 340px?
+        height: 340px;
+
+        // ASK: dziala na oba img?
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            // ODP: bo stosuje to do obu img uzywajac znacznika img!
+            // display: none;
+        }
+        // ASK: czego tyczy ta klasa? jak obrazki razem 
+        // ODP: nadpisuje img 2
+        .service-overlay {
+            position: absolute;
+            // background-color: #2ba8cc;
+            background-color: rgba($color: #2ba8cc, $alpha: 0.6);
+            top: 0;
+            // ASK: to po co fdrugi raz ustawiam h i w : 100%
+            // ASK: czy powtorny zapis powoduje dostosowanie h&w 100% do obiektu disp:absolute?
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            @include flexbox;
+            @include flex-align(center,center);
+            flex-direction: column;
+            // ODP: tu znika img2 transp
+            opacity: 0;
+            // ASK: co to robi
+            // ODP: /przesjscie miedzi img poprzez &:hoover
+            transition: all .3s;
+            // ASK: blad z hooverem czy & sprawdz?
+            // ODP: s zamiast c w opacity pamietaj 2xClik! zasada dla literowek
+            &:hover {
+                opacity: 1;
+            }
+            
+            img {
+                // ASK: czego dotyczy ta szerokosc
+                // ODP: samego obrazka tlo jest dalej duze 
+                // ASK: gdzie tlo jest dopasowane do img 1?
+                // ASK: to powinno byc podkreslone i wczesniej wyjasnione i pokazane przy img 2
+                width: 60px;
+                // ODP: daje img 2 naturalnej wysokisci ikonki
+                height: auto;
+            }
+
+            h3 {
+                color: #fff;
+            }
+
+        }
+    }
+
+    @media all and (min-width: $medium) {
+        // ASK: height nie dzialal bo brak .service
+        // ODP: bo .service obejmuje oba img 1&2 transp
+        .service {
+            height: 400px;
+        }
+    }
+}

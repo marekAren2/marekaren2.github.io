@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+font-family: $primary-font;
+color: $primary-text-color;
+}
+
+// ASK: czemy h1 w tym miejscu przed containerem po body?
+h1, h2, h3 ,h4 ,h5 ,h6 {
+    font-family: $secondary-font;
+    font-weight: 700;
+    // ODP: h1 bedzie miala inny kolor
+    color: $secondary-color;
+}
+
+h2 {
+font-size: 42px;
+}
+
+a {
+    // ASK: przed hoverem i po hover plynny ~53: cz2 gdzie to widac?!
+    transition: all .3s;
+}
+
+p {
+    // ASK: co to oznacza; pamietaj kropka nie przecinek
+    line-height: 1.5;
+}
+
+section {
+    padding: 30px 0;
+    .section-header {
+        text-align: center;
+        // ASK: nie widac co odsuwa o 40px
+        margin-bottom: 40px;
+
+        p {
+            margin: auto;
+            font-weight: 300;            
+        }
+    
+        @media all and (min-width: $medium) {
+            max-width: 70%;
+        }
+    }
+}
+
+.container {
+    max-width: $small-container;
+    width: $small-container;
+    padding: 0 23px;
+    margin: 0 auto;
+}
+
+@media all and (max-with: $large) {
+    .container {
+        max-width: $large-container;
+    
+    section {
+        padding: 60px 0;
+    }
+    }
+
+}
+@media all and (max-with: $extra-large) {
+    .container {
+        max-width: $extra-large-container;
+    }
+
+}
+

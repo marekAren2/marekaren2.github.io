@@ -1,0 +1,36 @@
+.row {
+    // ASK: co zrobil flexbox ze img 2 transp przykryl img 1 a wczesniej mial 0 x 428 a img 1 338x406
+    @include flexbox;
+}
+
+// ASK: pelna szerokosc wtornie tez dla .col w .infobox.col
+.col {
+    // ASK : czemu u mnie img 2 transp jest na wierzchu dziala 100 % szerokosci ale img 2 na wierzchu a nie img 1
+    // ODP: opacity: 0 zalatwilo sprawe i rozmiar dla img 2
+    width: 100%;
+}
+
+ @media all and (min-width: $medium ) {
+    .col-md-50p {
+        width: 50%;
+    }
+
+ }
+ 
+ @media all and (min-width: $medium ) {
+    .col-md-33p {
+        // @include flexbox;
+        // ASK: pieprzony przecinek zamiast kropki robil problem
+        width: 33.33%;
+    }
+ }
+
+ @media all and (min-width: $large ) {
+    .col-lg-25p {
+        width: 25%;
+    }
+ }
+
+//  ASK: ja dopisalem spr czy ok?
+ 
+ 

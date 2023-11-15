@@ -1,0 +1,33 @@
+%btn {
+border-radius: 30px;
+// ASK: spr co robi inl-bl po co?
+display: inline-block;
+// ASK: w paddingu jest na odwrot najpierw wysokosc pozniej szerosc spr?
+// ODP: pierwszy w pionie height
+padding: 15px 35px;
+text-transform: uppercase;
+text-decoration: none;
+border: 0;
+color: #fff;
+
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+    
+     &:hover {
+    background-color: $button-color;
+    }
+
+}
+// ASK: moj wpis sprawdz z projektem
+.btn-secondary {
+    @extend %btn;
+    background-color: $button-color;
+    
+     &:hover {
+    background-color: $primary-color;
+    }
+
+}

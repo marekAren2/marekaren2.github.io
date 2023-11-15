@@ -1,0 +1,152 @@
+.main-nav {
+    position: fixed;   
+    top: 0;
+    //  ASK: czego 100% szerokosc? 
+    width: 100%;
+    z-index: 9999;   
+    background-color: #fff;
+    padding: 12px 0;
+
+    .main-nav-holder {
+        // ASK: czy ulatwieniem jest 1 new komenda ktorej nie pamietam czy wpisanie 2-ch ktore vsc podpowiada i znam na pamiec??
+        @include flexbox;
+        // ASK : po co spacje miedzy czym? 
+        // ODP: zle divy domkniete poprawiony holder tyczy calego menu .brand>.hamburger+.close+.list-item
+        justify-content: space-between;
+        
+    }
+
+    .brand {
+        // ASK: po co ta wysokosc? 
+        // ODP: chyba znowu brak live server jak spr polaczenie czy aktywne
+        height: 50px;
+        // ASK: co robi inl-blo
+        display: inline-block;
+        
+        img {
+            height: 100%;
+        }
+    }
+
+    // ASK: o co chodzi co to?
+    // ODP: ma sens bo pozniej mozemy dorzucac w innym miejscu do %mobile-c i zadziala nam w rozszerzonych klasach .mobile- ktore uzywaja @extend %mobile- 
+    %mobile-controls {
+        font-size: 28px;
+        line-height: 50px;
+        cursor: pointer;
+
+    }
+
+    .mobile-hamburger {
+        @extend %mobile-controls;
+        // ASK: dlaczego jak byl bialy nie bylo widac mimi on display op-men-hol czyli tlo bylo niebieskie a hamburger bialy?
+        color: $primary-color;
+    }
+    
+    .mobile-close {
+        // ASK: ustawianie tych elementow jest wogole niezrozumiale zwlasza jak na nie patrzyc kiedy sa wirtualnie widoczne jest jakis lepszy sposob zwlaszcza w etapie extend
+        @extend %mobile-controls;
+        color: #fff;
+        text-align: right;
+        // ASK: ta opcja nic nie zmienia test na 100px bez zmian x-time mo-close
+        height: 50px;
+
+    }
+
+    .open-menu-holder {
+        position: fixed;
+        background-color: $primary-color;
+        top: 0;
+        right: 0;
+        max-width: 480px;
+        // ASK: co zmienia with po max-with tej samej wartsci ?
+        // ODP: rozszerzyl menu blue na 100% ponizej 480px
+        // ASK: czemu menu sie zwezalo  bez width a z max-width?
+        // width: 480px;
+        text-align: right;
+        // ASK: wypadnie z kontenera bo po za fixowaniudlatego padding? 15:15
+        // ODP: 23px lewa- prawa zwlaszcz right bo wylewa tekst poza prawy ale widac na display 
+        padding: 12px 23px;
+        // ASK: nie lepiej zostawic ta opcje off zeby widziec co robimy?
+        display: none;
+        // ASK : te klasy lacza sie w nestingu i widac to w style.css sprawdz
+        
+        &.open {
+            display: block;
+
+        }
+
+        .menu {
+            // ASK : wyswietlaja sie kropki mimo opcji li-sty: none
+            // ODP: brak bylo klasy .menu  w ul jest OK poprawione
+            list-style: none;
+            .menu-item {
+                // ASK : wielkosc u lukasz wydaje sie wieksza?
+                height: 50px;
+                text-transform: uppercase;
+                // ASK: potrzebne sa te paddingi?
+                padding: 20px 0;
+                a {
+                    // ODP: prawdopodobnie usuwa podkreslenie linku TAK
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $large) {
+        
+        .main-nav-holder {
+            // ASK dla kogo jest itemem
+            //ODP: jest w container
+            // ASK: czemu przyciagla itemy do start, a align-self flex-start nie zrobil nic 
+            justify-content: flex-start;
+        }
+
+        .brand {
+            height: 80px;
+        }
+
+        %mobile-controls {
+            display: none;
+        }
+                
+        .open-menu-holder {
+            display: block;
+            // ASK: co robi pos:static na o-m-h z mobile-hamburger ze jest na srodku
+            position: static;
+            background-color: transparent;
+            width: auto;
+            max-width: 100%;
+            padding: 0;
+            // ASK: to nic nie robi? nie przesunal max do lewek cz.2 okolo 30:40
+            align-self: flex-start;
+                     
+            .menu {
+                // ASK: czemu zmieniamy na bialy powyzej 992 jak nic nie widac
+                background-color: #fff;
+
+                .menu-item {
+                    // ASK: czy trzeba robic czary mary na niewidocznych elementach czy mozna jakos dzialac na widocznych jakis sposob bo ten nie przemawia wogole do mnie przynajmniej na obecnym etapie
+                    display: inline-block;
+                    margin:  0 20px;
+                    // ASK : co znaczy initial                   
+                    font-size: initial;
+                    
+                    a {
+                        // ASK : jak spr wartosc zmiennej szybko praktycznie
+                        // ASK: byla wyrazowka w variables , ale juz poprawione a dalej nie dziala kolor na a
+                        // ASK: obserwuj bledy saas compiler powieksz okno bo nie widac kiedy bledy
+                        color: $secondary-color;
+                        font-weight: 700;
+                    
+                        
+
+                    }
+                }
+            }
+        }
+       
+    }
+}

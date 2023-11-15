@@ -1,0 +1,47 @@
+%common-infobox {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.infobox {
+    @extend %common-infobox;
+    .infobox-inner {
+        // ASK: popraw kolor
+        border: 1px solid #f0f0f0;
+        padding: 25px 25px;
+        border-radius: 2px;
+        
+        &:hover {
+            // ASK: co oznaczaja pola w shadow
+            box-shadow: 0 8px 20px #f0f0f0;
+        }
+        img {
+            width: 100%;
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+.infobox-team {
+    @extend %common-infobox;
+    margin-top: 60px;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .infobox-caption {
+    // .infobox-team-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        // ASK: co robi marg: auto?
+        margin: auto;
+        width: 80%;
+    }
+        
+    }

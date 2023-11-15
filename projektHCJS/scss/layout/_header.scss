@@ -1,0 +1,126 @@
+// ASK: wszystko bylo poza .main-header teraz wlazylem do srodka ajkie to ma znaczenie co zmienilo nie zauwazylem
+.main-header {
+    // ASK: dlaczego taka wysokosc
+    height: 700px;
+    @include flexbox;
+    // ASK: piszemy, a efekty zadnego nie widac ani nie pokazujesz,ani tlumaczysz co oczekujemy ,bez sensu
+    @include flex-align(flex-start, center);
+    position: relative;
+
+    .header-description {
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $secondary-font;
+        font-weight: 700;
+    }
+    h1 {
+        color: #1e2528;
+        font-size: 50px;
+    }
+
+    .main-header-content {
+        color: $secondary-color;
+    }
+
+    .buttons-panel {
+        margin-top: 40px;
+        .reserve {
+            display: inline-block;
+            padding: 14px 20px;
+            //ASK: nie powinien zniknac napis teraz bo biale tlo
+            // ODP: byla liteowka w reserve w html
+            color: #fff;
+            background-color: $primary-color;
+            text-decoration: none;
+
+            &:hover{
+                background-color: $button-color;
+            }
+        }
+        .watch {
+            color: $secondary-color;
+            display: inline-block;
+            // ASK: nie daje efektow
+            margin-left: 40px;
+            // margin-left: 15px;
+            text-decoration: none;
+
+            i {
+                // ASK: jak zrobic koleczko
+                // ODP: jak all i ponizej
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                // ASK : co to line-height
+                line-height: 40px;
+                border: 1px solid $secondary-color;
+                border-radius: 50%;
+                // ASK: po co transition tu? co robi bo nie widze 56:00 cz.2 
+                transition: all .3s;
+
+            }
+        }
+    }
+
+    .header-bg {
+        // ASK : co sie stalo z tym obrazkiem bo ciezko zobaczyc?
+        // ODP: po max-w 30% widac ze przykleil sie pod nav, mie main-header? 
+        position: absolute;
+        // ASK: przykleja top pod body?!
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        // ASK: po z-i co u mnie nie potrzeba - nic nie robi
+        // ODP: przykrywa hamburhera i menu dla 992
+        z-index: 10000;
+        // ODP: ma go nie widac w mobile<992
+        display: none;
+    }
+
+    .header-flowers {
+        // ASK: czemu bez with sie przykleil do nav, a po 8% odsunal sie? co za mechanizm
+        // ASK: position przykleil sie do body? pod nav?
+        position: absolute; 
+        // ASK: jesdnak po 35% top jest na header
+        top: 35%;
+        left: 0;
+        max-width: 8%;
+        // ASK: znalazlem ale kiedy na filmie przenioslem z dolu cala sekcje
+        z-index: -1;
+    }
+
+    @media all and (min-width: $extra-large) {
+        .header-bg {
+            // ASK: wg mnie ten with nic nie zmienia 
+            // ODP: chyba byl blad with na max-with i sie skaluje wtedy
+            // width: 40%;
+            max-width: 40%;
+            // ASK: ten @media dla 1200 niedziała  display to moj test
+            display: none;
+        }
+    }
+
+    @media all and (min-width: $large) {
+        //ASK: koncepcja odwrotna zmniejsz tekst zeny obrazek nie nachodzil a nie obrazek pomniejsz
+        .main-header-holder {
+            width: 60%;
+        }
+
+        .header-bg {
+            display: block;
+        }
+    }
+    // ASK : dlaczego tutaj jest max-width a wyzej min nie rozumiem?!
+    @media all and (max-width:$extra-small ) {
+        //ASK: trzba zaczynac od najwyzszej w hierarch czy tylko parent
+        .buttons-panel {
+            .reserve,
+            .watch {
+                margin: 0;
+                
+            }
+        }
+
+    }
+}
