@@ -1,0 +1,247 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
+@media only screen and (min-width: 734px) {
+	.heroes {
+		grid-template-rows: 70rem 68rem 68rem;
+	}
+
+	.iPad-hero {
+		&__picture {
+			background-size: 125rem;
+			background-position: center;
+			background-image: url('../img/hero/hero_ipad__rh99l6c3yuyy_medium.jpg');
+		}
+
+		&__text {
+			top: 30rem;
+			left: 50%;
+		}
+	}
+
+	.iPhone-hero {
+		&__picture {
+			background-size: 130rem;
+			background-image: url('../img/hero/hero_iphone14__fjmsqstr1ceq_medium.jpg');
+		}
+
+		&__text {
+			top: 6rem;
+		}
+	}
+
+	.endframe-hero {
+		&__picture {
+			background-size: 110rem;
+			background-position: center 0.8rem;
+			background-image: url('../img/hero/hero_endframe__8xosbwdvpaqe_medium.jpg');
+		}
+
+		&__text {
+			max-width: 43rem;
+			bottom: 6rem;
+		}
+	}
+
+	.text-title {
+		font-size: 4.8rem;
+	}
+
+	.text-content {
+		font-size: 2.4rem;
+	}
+
+	.text-link {
+		font-size: 1.9rem;
+	}
+
+	.promos {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 49rem);
+		margin-left: 1.2rem;
+		margin-right: 1.2rem;
+	}
+
+	.promo-picture {
+		background-size: 52rem;
+	}
+
+	.promo-text {
+		top: 4rem;
+	}
+
+	.iPhone-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_iphone14pro__4n4twj56fzmu_medium.jpg');
+		}
+	}
+
+	.tv-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_tv4k_avail__e17d9isb0vwy_medium.jpg');
+		}
+
+		&__text-title {
+			height: 4rem;
+			background-image: url('../img/promo/promo_tv4k_logo__5m5umvk10duu_medium.png');
+		}
+	}
+
+	.iPad-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_ipadpro__ch217v9v7no2_medium.jpg');
+		}
+
+		&__text-content::before {
+			background-image: url('../img/promo/promo_m2_chip__enw2kz91lsuq_medium.png');
+		}
+	}
+
+	.watchU-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg');
+		}
+
+		&__text-title {
+			background-image: url('../img/promo/promo_logo_apple_watch_ultra__ebzaahharnue_medium.png');
+		}
+	}
+
+	.watch8-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_apple_watch_series_8__ch7rexplmihe_medium.jpg');
+		}
+
+		&__text-title {
+			background-image: url('../img/promo/promo_logo_apple_watch_series_8__ee6riplsucuq_medium.png');
+		}
+	}
+
+	.fit-promo {
+		&__picture {
+			background-image: url('../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_medium.jpg');
+		}
+
+		&__text-title {
+			background-image: url('../img/promo/applefitness_logo_promo__gnq1diylj3qm_medium.png');
+		}
+	}
+
+	.slider {
+		height: 41rem;
+
+		&__track-container {
+			height: 37rem;
+			width: 70rem;
+		}
+
+		&__slide {
+			min-width: 70rem;
+
+			&-info-top {
+				display: none;
+			}
+
+			&-info-bottom {
+				flex-direction: row-reverse;
+				align-items: flex-end;
+
+				h4 {
+					order: 1;
+					font-size: 1.9rem;
+					margin-left: 2.5rem;
+					margin-bottom: 1.5rem;
+				}
+
+				&-text {
+					position: absolute;
+					bottom: 0.2rem;
+					left: 21.3rem;
+					font-size: 1.7rem;
+					text-align: left;
+				}
+			}
+			&-button {
+				order: 2;
+				margin-bottom: -1rem;
+				margin-left: 3rem;
+			}
+		}
+
+		&__slide-link {
+			&--1 {
+				background-image: url('../img/slider/1-slide-medium-selena.jpg');
+			}
+			&--2 {
+				background-image: url('../img/slider/2-slide-medium-quest.jpg');
+			}
+			&--3 {
+				background-image: url('../img/slider/3-slide-medium-believe.jpg');
+			}
+			&--4 {
+				background-image: url('../img/slider/4-slide-medium-see.jpg');
+			}
+			&--5 {
+				background-image: url('../img/slider/5-slide-medium-causeway.jpg');
+			}
+			&--6 {
+				background-image: url('../img/slider/6-slide-medium-shantaram.jpg');
+			}
+			&--7 {
+				background-image: url('../img/slider/7-slide-medium-morning.jpg');
+			}
+			&--8 {
+				background-image: url('../img/slider/8-slide-medium-sisters.jpg');
+			}
+			&--9 {
+				background-image: url('../img/slider/9-slide-medium-acapulco.jpg');
+			}
+		}
+
+		&__autoplay {
+			right: 3.5rem;
+		}
+
+		&__button {
+			display: none;
+		}
+
+		&__previous {
+			right: calc(50% + 356px);
+		}
+
+		&__next {
+			left: calc(50% + 356px);
+		}
+	}
+
+	.head-store {
+		&__title {
+			padding-top: 12rem;
+			padding-bottom: 10rem;
+			h2 {
+				font-size: 4.6rem;
+			}
+		}
+	}
+
+	.carousel-store {
+		margin-bottom: 9rem;
+	}
+
+	.iPhone-store,
+	.acc-store {
+		padding-left: 2rem;
+		&__title,
+		&__accessories-title {
+			font-size: 2.2rem;
+		}
+
+		&__devices,
+		&__accessories {
+			&-card {
+				min-width: 30.8rem;
+			}
+		}
+	}
+}

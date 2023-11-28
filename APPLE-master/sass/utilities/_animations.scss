@@ -1,0 +1,28 @@
+@keyframes navItemAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes footAnimation {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes scale-up-tr {
+	0% {
+		transform: scale(0);
+		transform-origin: 100% 0;
+	}
+	100% {
+		transform: scale(1);
+		transform-origin: 100% 0;
+	}
+}

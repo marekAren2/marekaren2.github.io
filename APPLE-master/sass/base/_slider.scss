@@ -1,0 +1,279 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
+.slider {
+	position: relative;
+	height: 54rem;
+	width: 100%;
+	overflow: hidden;
+
+	&__track-container {
+		display: flex;
+		margin: 0 auto;
+		width: 28.2rem;
+		height: 50rem;
+		position: relative;
+	}
+
+	&__slides {
+		display: flex;
+		height: 100%;
+	}
+
+	&__slide {
+		min-width: 28.2rem;
+		height: 100%;
+		padding: 0 0.6rem;
+		opacity: 0.2;
+		transition: opacity 1s;
+
+		&-link {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			background-repeat: no-repeat;
+
+			&--1 {
+				background-image: url('../img/slider/1-slide-small-selena.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/1-selena-548x133.png');
+				}
+			}
+			&--2 {
+				background-image: url('../img/slider/2-slide-small-quest.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/2-quest-548x94.png');
+				}
+			}
+			&--3 {
+				background-image: url('../img/slider/3-slide-small-believe.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/3-believe-548x79.png');
+				}
+			}
+			&--4 {
+				background-image: url('../img/slider/4-slide-small-see.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/4-see-548x269.png');
+				}
+			}
+			&--5 {
+				background-image: url('../img/slider/5-slide-small-causeway.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/5-causeway-548x96.png');
+				}
+			}
+			&--6 {
+				background-image: url('../img/slider/6-slide-small-shantaram.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/6-shantaram-548x126.png');
+				}
+			}
+			&--7 {
+				background-image: url('../img/slider/7-slide-small-morning.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/7-morning-548x165.png');
+				}
+			}
+			&--8 {
+				background-image: url('../img/slider/8-slide-small-sisters.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/8-sisters-548x90.png');
+				}
+			}
+			&--9 {
+				background-image: url('../img/slider/9-slide-small-acapulco.jpg');
+
+				.slider__slide-info-top-title {
+					background-image: url('..//..//img/slider/9-acapulco-548x118.png');
+				}
+			}
+		}
+
+		&--active {
+			opacity: 1;
+
+			.slider__slide-info-bottom {
+				transition: transform 1s, opacity 1s;
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-info-top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			height: 15rem;
+
+			&-icon {
+				height: 3.3rem;
+				width: 6.8rem;
+				margin-top: 1.5rem;
+				object-fit: cover;
+				background-repeat: no-repeat;
+				background-image: url('..//img/slider/logo_hero_light__d7t8cya4x26a_small.png');
+			}
+
+			&-title {
+				width: 22rem;
+				height: 5.4rem;
+				margin-top: 0.5rem;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&-info-bottom {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+			height: 35rem;
+			padding: 1rem;
+			margin-bottom: 1.7rem;
+			text-shadow: 2px 2px 3px rgba(66, 68, 90, 1);
+			transform: translateY(15rem);
+			opacity: 0;
+
+			&-text {
+				padding: 0.3rem;
+				font-size: 1.6rem;
+				font-weight: 500;
+				text-align: center;
+			}
+		}
+
+		&-button {
+			button {
+				position: relative;
+				background-color: $first;
+				font-family: $font;
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin-top: 1.3rem;
+				padding: 1.3rem 5rem 1.5rem 2rem;
+				border: none;
+				border-radius: 2.5rem;
+			}
+
+			::before {
+				position: absolute;
+				display: inline-block;
+				top: 1.4rem;
+				right: 2.2rem;
+				content: '';
+				width: 1.7rem;
+				height: 1.7rem;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url('..//img/buttons/black-play.svg');
+			}
+		}
+	}
+
+	&__nav {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 4rem;
+		width: 100%;
+		background-color: $bgcolor;
+	}
+
+	&__nav-dots-contaner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__nav-dot {
+		width: 0.8rem;
+		height: 0.8rem;
+		margin: 0 0.7rem;
+		border: none;
+		border-radius: 50%;
+		background-color: $second;
+		opacity: 0.2;
+
+		&--active {
+			opacity: 0.8;
+		}
+	}
+
+	&__auto-play,
+	&__stop-play {
+		position: absolute;
+		right: 2rem;
+		width: 2rem;
+		height: 2rem;
+		border: none;
+		background-color: inherit;
+		background-size: contain;
+	}
+
+	&__auto-play {
+		background-image: url('../img/buttons/play-button.png');
+	}
+
+	&__stop-play {
+		background-image: url('../img/buttons/pause-button.png');
+	}
+
+	&__previous,
+	&__next {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		cursor: pointer;
+	}
+	&__previous {
+		left: 0rem;
+		right: calc(50% + 146px);
+	}
+
+	&__next {
+		right: 0rem;
+		left: calc(50% + 146px);
+	}
+
+	&__button {
+		position: absolute;
+		top: calc(50% - 40px);
+		width: 4rem;
+		height: 4rem;
+		border: none;
+		background-color: transparent;
+		background-size: contain;
+		opacity: 0.7;
+		&--left {
+			background-image: url('../img/buttons/left.png');
+			left: calc(40% - 15px);
+		}
+		&--right {
+			background-image: url('../img/buttons/right.png');
+			right: calc(40% - 15px);
+		}
+	}
+}
+
+.active-dot {
+	opacity: 0.8;
+}
